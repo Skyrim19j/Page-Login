@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-synthesis: none;
+    
+    /* Desactiva la selección de texto */
+    user-select: none; 
+    -webkit-user-select: none; /* Para Safari y Chrome antiguos */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para Internet Explorer/Edge */
+    
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: url('/src/Components/assets/forest.png') no-repeat center/cover;
+}
+
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}

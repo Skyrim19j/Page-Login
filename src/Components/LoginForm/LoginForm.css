@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.559);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 20px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.559);
+    border-radius: 40px;    
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.559);
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 4px;
+    text-decoration: none;
+}
+
+.remember-forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+.wrapper button:hover {
+    color: #fff;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.559);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center; 
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Asegura que el contenedor del input tenga posición relativa */
+.input-box {
+    position: relative;
+    /* ... tus otros estilos ... */
+}
+
+/* Estilo para el ícono del ojo para que sea cliqueable */
+.icon-eye {
+    position: absolute;
+    right: 20px; /* Ajusta según tu diseño */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; /* Hace que aparezca la manita al pasar el mouse */
+    font-size: 16px;
+    color: #fff; /* O el color que uses */
+    z-index: 10;
+}
+
+/*VISTA PARA MOBILES*/
+
+/* --- MEDIA QUERY: Estilos para Celulares (pantallas menores a 480px) --- */
+@media (max-width: 480px) {
+    
+    /* 1. Ajustamos el contenedor principal */
+    .wrapper {
+        width: 90%; /* En celular, que ocupe el 90% de la pantalla */
+        margin: 10px auto; /* Menos margen vertical */
+        padding: 20px 25px; /* Reducimos el relleno interno para ganar espacio */
+    }
+
+    /* 2. Reducimos un poco el tamaño del título */
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    /* 3. Ajustamos los inputs para dedos táctiles */
+    .input-box {
+        margin: 20px 0; /* Menos espacio entre inputs */
+    }
+    
+    .input-box input {
+        /* Aseguramos que la altura sea cómoda para tocar con el dedo */
+        height: 45px; 
+        padding: 0 45px 0 20px; /* Ajusta el padding si el texto se encima al icono */
+    }
+
+    /* Ajustar posición de los iconos si es necesario */
+    .input-box .icon,
+    .icon-eye {
+        font-size: 18px; /* Un poco más pequeños si hace falta */
+    }
+
+    /* 4. "Remember me" y "Forgot password" */
+    /* En pantallas MUY estrechas, a veces es mejor ponerlos uno debajo del otro */
+    .remember-forget {
+        flex-direction: column; /* Cambia de fila a columna */
+        gap: 15px; /* Espacio entre los elementos */
+        text-align: center; /* Centra el texto */
+        font-size: 14px; /* Texto un poco más pequeño */
+    }
+
+    /* 5. Botón de Login */
+    button {
+        height: 45px; /* Buena altura táctil */
+        font-size: 16px;
+    }
+    
+    /* 6. Enlace de registro */
+    .register-link {
+        font-size: 13px;
+    }
+}
