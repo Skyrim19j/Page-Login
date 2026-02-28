@@ -31,7 +31,7 @@ function App() {
       
       <ParticleBackground />
       
-      <BrowserRouter>
+      <BrowserRouter basename="/Page-Login">
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
