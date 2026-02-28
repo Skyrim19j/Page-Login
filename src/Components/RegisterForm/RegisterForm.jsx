@@ -23,6 +23,8 @@ const RegisterForm = () => {
                     <FaUser className='icon'/>
                 </div>
                
+
+               
                 <div className="input-box">
                     <input 
                         type={showPassword ? "text" : "password"} 
@@ -41,6 +43,8 @@ const RegisterForm = () => {
                     {password.length === 0 && <FaLock className='icon' />}
                 </div>
 
+
+
                 <div className="input-box">
                     <input 
                         type={showPassword ? "text" : "password"} placeholder='Confirm password' required value={password} 
@@ -55,11 +59,13 @@ const RegisterForm = () => {
                     {password.length === 0 && <FaLock className='icon' />}
                 </div>        
 
+
                 <button type="submit">Register</button>
 
                 <div className="register-link">
                     <p>Already have an account? <Link to="/">Login</Link></p>
                 </div>
+
 
             </form>
 
