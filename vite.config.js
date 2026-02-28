@@ -13,6 +13,8 @@ export default defineConfig({
       }
     })
   ],
+  base: "/page-login",
+  
   server: {
     port: 3000,
   }
